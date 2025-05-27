@@ -5,6 +5,6 @@ const router = express.Router();
 
 router.post('/login', loginUser);
 router.post('/update-score', updateScore);
-router.get('/high-score/:phone', getHighScore);
+router.get('/high-score/phone', getHighScore);
 
 export default router;

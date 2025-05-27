@@ -14,7 +14,10 @@ export const loginUser = async (req: Request, res: Response) => {
       res.json({message : "New user created"})
     }
 
-    res.json(user);
+      if (user) {
+        res.json({message : "user exists","user" : user})
+      }
+      
   } catch (error) {
     res.status(500).json({ error: 'Server Error' });
   }
